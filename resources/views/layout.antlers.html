@@ -1,0 +1,47 @@
+---
+date: now()
+---
+
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    </head>
+    <body class="font-sans leading-normal text-black bg-cream">
+      <header class="mb-8 lg:mb-16">
+        <div class="container mx-auto">
+          <div class="flex flex-row justify-end">
+            <ul class="flex lg:flex-row">
+              <li><a href="https://instagram.com"><img src="https://via.placeholder.com/32/0000FF/FFFFFF?Text=IG" alt=""></a></li>
+              <li class="ml-1"><a href="https://youtube.com"><img src="https://via.placeholder.com/32/FF0000/FFFFFF?Text=YT" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container mx-auto">
+          <div class="flex items-center width-full lg:flex-row">
+            <a class="font-serif text-4xl text-test lg:text-5xl xl:text-6xl" href="/">The Blurr</a>
+
+            <nav class="ml-4 lg:ml-16">
+              <ul class="flex lg:flex-row">
+                <li class="text-xl font-bold lg:text-2xl"><a class="hover:text-brown active:text-brown" href="/about">About</a></li>
+                <li class="ml-4 text-xl font-bold lg:text-2xl"><a class="hover:text-brown active:text-brown" href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {{ template_content }}
+
+      <footer class="pt-8 pb-8 text-white bg-dark-grey">
+        <div class="container mx-auto">
+          <p>Copyright<sup>&copy;</sup> {{ date format="Y" }}</p>
+        </div>
+      </footer>
+      <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>
